@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  margin-top: 4.5rem;
+  justify-content: center;
+}
+
+.inputToDo {
+  display: flex;
+  margin-top: 3.5rem;
+  justify-content: center;
+}
+
+.inputToDo input {
+  border-radius: 8px;
+  height: 3rem;
+  background: #262626;
+  width: 40rem;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+
+  border: 1px solid #0D0D0D;
+  color: #808080;
+
+  padding: 1rem;
+}
+
+.inputToDo button {
+  margin-left: 1rem;
+  background-color: #1E6F9F;
+
+  color: #F2F2F2;
+  width: 5rem;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  gap: 8px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+.section {
+  margin: auto;
+  margin-top: 1rem;
+  width: 45rem;
+}
+
+
+.taskLabel {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.taskLabelCreated {
+  color: #4EA8DE;
+}
+
+.taskLabelDone {
+  color: #8284FA;
+}
+
+.badge {
+  background: #333333;
+  color: #D9D9D9;
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.container {
+  color: #808080;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  height: 20rem;
+
+
+  margin-top: 1rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 700;
+}

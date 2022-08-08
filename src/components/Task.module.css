@@ -1,0 +1,39 @@
+.task {
+  margin: auto;
+  margin-top: 2rem;
+  width: 45rem;
+
+  display: flex;
+}
+
+.task p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 0.875rem;
+  margin-left: 1rem;
+}
+
+.task button[type="submit"] {
+  background: transparent;
+  border: 0;
+  color: #808080;
+
+  transition: color 0.2s;
+}
+
+.task button[type="submit"]:hover {
+  color: #F75A68;
+}
+
+.task button {
+  background: transparent;
+  border: 0;
+
+  transition: opacity 0.2s; 
+}
+
+.task button:hover {
+  opacity: 0.8;
+}
