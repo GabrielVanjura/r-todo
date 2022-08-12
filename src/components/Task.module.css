@@ -4,6 +4,7 @@
   width: 45rem;
 
   display: flex;
+  align-items : center;
 }
 
 .task p {
@@ -13,10 +14,15 @@
 
   font-size: 0.875rem;
   margin-left: 1rem;
+
+  width: 100%;
+
+  text-align: justify;
 }
 
 .task button[type="submit"] {
   background: transparent;
+  margin-left: 2rem;
   border: 0;
   color: #808080;
 

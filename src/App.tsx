@@ -7,37 +7,27 @@ import { Task } from './components/Task'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { ListChecks, PlusCircle } from 'phosphor-react'
 
+interface ITask {
+  id: number;
+  content: string;
+  done: boolean;
+}
+
 function App() {
 
-  const [task, setTask] = useState([
-    {
-      id: 1,
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, natus ex blanditiis eligendi quae vero commodi voluptates nesciunt! Omnis sunt iure ea quisquam velit minima inventore vel obcaecati ipsa enim?",
-      done: false
-    },
-    {
-      id: 2,
-      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus molestias eum dolor veritatis expedita dicta perferendis deserunt rerum neque molestiae. Magnam, doloribus alias eum aperiam nemo distinctio quidem porro. Voluptatibus.",
-      done: true
-    },
-    {
-      id: 3,
-      content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quibusdam officia vero natus quis? Nemo reiciendis quod nesciunt numquam quidem saepe alias cupiditate fuga neque qui, cumque ea voluptate voluptatibus!",
-      done: true
-    },
-    {
-      id: 4,
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eveniet maxime, totam qui a dolor consequuntur facere deleniti id! Labore expedita, sint animi a similique ipsa saepe asperiores corporis accusantium.",
-      done: false
-    }
-  ])
+  const [task, setTask] = useState<ITask[]>([])
   const [inputTask, setInputTask] = useState('')
 
   function handleCrateNewTask(event: FormEvent) {
     event.preventDefault()
 
-    const id = task[task.length - 1].id + Math.random()
+    if (inputTask === '')
+      return;
 
+    let id = 1;
+    if (task.length > 0)
+      id = task[task.length - 1].id + Math.random()
+    console.log(id)
     const newTask = {
       id,
       content: inputTask,
@@ -105,6 +95,7 @@ function App() {
         task.length > 0 ?
           task.map(t => (
             <Task
+              key={t.id}
               id={t.id}
               onDelete={deleteTask}
               content={t.content}
